@@ -1,3 +1,6 @@
+#ifndef BITMAP_H
+#define BITMAP_H
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -42,7 +45,7 @@ void writeBitmapFile( BitmapFileHeader*, FILE* );
 void readBitmapInfo( BitmapInfoHeader*, FILE* );
 void writeBitmapInfo( BitmapInfoHeader*, FILE* );
 
-
+#endif BITMAP_H
 
 
 
