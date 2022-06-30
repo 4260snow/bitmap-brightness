@@ -5,9 +5,7 @@
 int main(int argc, char** argv)
 {
 	int n = atoi(argv[3]);
-	// atoi для n = atoi(argv[3])
 	//Добавить free
-	// Закрытие файлов
 	FILE* fin = fopen(argv[1], "r");
 	if (fin == NULL)
 	{
@@ -129,6 +127,14 @@ int main(int argc, char** argv)
 		//printf("%d\t", i + mx);
 		fseek(fout, (4 - (n * 3) % 4) % 4, SEEK_CUR);		
 	}
+	
+	for (int i = 0; i < bmiHeader.biHeight; i++)
+	{
+		free(rgb[i]);
+		free(y[i])
+	}
+	free(rgb);
+	free(y);
 
 	fclose(fin);
 	fclose(fout);
