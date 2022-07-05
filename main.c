@@ -89,27 +89,27 @@ int main(int argc, char** argv)
 	BitmapFileHeader header2;
 	
 	header2.bfType = header.bfType;
-    header2.bfSize = 14 + 40 + n * n * 3;
-    header2.bfReserved1 = header.bfReserved1;
-    header2.bfReserved2 = header.bfReserved2;
-    header2.bfOffBits = 14 + 40;
+	header2.bfSize = 14 + 40 + n * n * 3;
+	header2.bfReserved1 = header.bfReserved1;
+	header2.bfReserved2 = header.bfReserved2;
+	header2.bfOffBits = 14 + 40;
     
-    writeBitmapFile(&header2, fout);
+	writeBitmapFile(&header2, fout);
 		
 	// Новый заголовок изображения
 	BitmapInfoHeader bmiHeader2;
 	
 	bmiHeader2.biSize = 40;
-    bmiHeader2.biWidth = n;
-    bmiHeader2.biHeight = n;
-    bmiHeader2.biPlanes = bmiHeader.biPlanes;
-    bmiHeader2.biBitCount = bmiHeader.biBitCount;
-    bmiHeader2.biCompression = bmiHeader.biCompression;
-    bmiHeader2.biSizeImage = bmiHeader.biSizeImage;
-    bmiHeader2.biXPelsPerMeter = bmiHeader.biXPelsPerMeter;
-    bmiHeader2.biYPelsPerMeter = bmiHeader.biYPelsPerMeter;
-    bmiHeader2.biClrUsed = bmiHeader.biClrUsed;
-    bmiHeader2.biClrImportant = bmiHeader.biClrImportant;
+	bmiHeader2.biWidth = n;
+	bmiHeader2.biHeight = n;
+	bmiHeader2.biPlanes = bmiHeader.biPlanes;
+	bmiHeader2.biBitCount = bmiHeader.biBitCount;
+	bmiHeader2.biCompression = bmiHeader.biCompression;
+	bmiHeader2.biSizeImage = bmiHeader.biSizeImage;
+	bmiHeader2.biXPelsPerMeter = bmiHeader.biXPelsPerMeter;
+	bmiHeader2.biYPelsPerMeter = bmiHeader.biYPelsPerMeter;
+	bmiHeader2.biClrUsed = bmiHeader.biClrUsed;
+	bmiHeader2.biClrImportant = bmiHeader.biClrImportant;
 	
 	writeBitmapInfo(&bmiHeader2, fout);
 	
