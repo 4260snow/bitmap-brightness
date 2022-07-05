@@ -45,7 +45,7 @@ void writeBitmapFile( BitmapFileHeader*, FILE* );
 void readBitmapInfo( BitmapInfoHeader*, FILE* );
 void writeBitmapInfo( BitmapInfoHeader*, FILE* );
 
-#endif BITMAP_H
+#endif
 
 
 
